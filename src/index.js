@@ -1,13 +1,31 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './components/App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import Airline from './components/Airline';
+import Airplanes from './components/Airplanes';
+import Flights from './components/Flights';
+import Search from './components/Search';
+import User from './components/User';
+import Error from './components/Error';
+import NavBar from './components/Navbar'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <BrowserRouter>
+    <NavBar />
+    <Routes>
+      <Route path='/' element={ <App /> } exact />
+      <Route path='/airplanes' element={ <Airplanes />} />
+      <Route path='/flights' element={ <Flights /> } />
+      <Route path='/search' element={ <Search /> } />
+      <Route path='/user' element={ <User /> } />
+      <Route element={ <Error /> } />
+    </Routes>
+
+  </BrowserRouter>,
   document.getElementById('root')
 );
 
