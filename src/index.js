@@ -11,7 +11,9 @@ import Flights from './components/Flights';
 import Search from './components/Search';
 import User from './components/User';
 import Error from './components/Error';
-import NavBar from './components/Navbar'
+import NavBar from './components/Navbar';
+import Signup from './components/Signup';
+import Login from './components/Login';
 
 ReactDOM.render(
   <BrowserRouter>
@@ -22,6 +24,8 @@ ReactDOM.render(
       <Route path='/flights' element={ <Flights /> } />
       <Route path='/search' element={ <Search /> } />
       <Route path='/user' element={ <User /> } />
+      <Route path='/login' element={ <Login /> } />
+      <Route path='/signup' element={ <Signup />} />
       <Route element={ <Error /> } />
     </Routes>
 

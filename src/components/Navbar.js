@@ -8,6 +8,8 @@ function NavBar() {
       <Link to='/flights'>Flights</Link>
       <Link to='/search'>Search</Link>
       <Link to='/user'>User</Link>
+      <Link to='/Signup'>Sign Up</Link>
+      <Link to='/Login'>Log In</Link>
     </div>
   );
 }
