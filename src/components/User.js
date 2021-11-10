@@ -12,7 +12,7 @@ class User extends Component {
   componentDidMount() {
     const fetchUsers = () => {
       axios('http://localhost:3000/users.json').then(response =>{
-        console.log(response.data)
+        // console.log(response.data)
         this.setState({users: response.data});
       });
     };
