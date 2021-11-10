@@ -91,7 +91,7 @@ class AirplanesForm extends Component {
 }
 
 
-/// FETCH INFORMATION FROM DB ///////
+/// FETCH INFORMATION FROM RAILS DATABASE ///////
 const AirplanesList = (props) => {
   return(
     <div>
