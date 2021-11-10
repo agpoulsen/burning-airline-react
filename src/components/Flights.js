@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import '../index.css'
 
 class Flights extends Component {
   constructor() {
@@ -24,7 +25,7 @@ class Flights extends Component {
         <h1>Flights List </h1>
 
         <FlightForm />
-        <table width="400px"> <tr> <th> Flight Number </th>  <th> Origin </th> <th> Destination </th> <th> Date </th> <th> Plane </th> <th> Seat </th> </tr> </table>
+
         <FlightList flights={ this.state.flights} />
       </div>
     );
@@ -45,9 +46,30 @@ const FlightList = (props) => {
 console.log(props.flights.map((s) => <p>{ s.flight_number }</p>));
   return (
     <div>
-      { props.flights.map((s) =>
-        <table width="400px" key={s.id}> <tr> <td> { s.flight_number } </td> <td> { s.origin } </td> <td> { s.destination } </td> <td> { s.date } </td> <td> { s.plane } </td> <td> { s.seat } </td> </tr> </table>  )
-      }
+      <table class="headings">
+        <tr>
+          <th> Flight Number </th>
+          <th> Origin </th>
+          <th> Destination </th>
+          <th> Date </th>
+          <th> Plane </th>
+          <th> Seat </th>
+       </tr>
+     </table>
+
+    { props.flights.map((s) =>
+
+       <table>
+        <tr>
+          <td> { s.flight_number } </td>
+          <td class="table"> { s.origin } </td>
+          <td class="table"> { s.destination } </td>
+          <td class="table"> { s.date } </td>
+          <td class="table"> { s.plane } </td>
+          <td class="table"> { s.seat } </td>
+        </tr>
+      </table>
+    )}
     </div>
   )
 };
