@@ -36,14 +36,21 @@ class FlightForm extends Component {
   render() {
     return (
       <form>
-      coming soon
+      Flight Number: <input type="integer" required placeholder="Flight No" />
+      Origin: <input type="text" required placeholder="From" />
+      Destination: <input type="text" required placeholder="To" />
+      Date: <input type="date" required placeholder="Date" />
+      Plane: <input type="text" required placeholder="Plane Name" />
+      Seat: <input type="integer" required placeholder="Seat No" />
+      <input type="submit" value="Create Flight" />
+      <input type="submit" value="Cancle" /> 
       </form>
     );
   }
 }
 
 const FlightList = (props) => {
-console.log(props.flights.map((s) => <p>{ s.flight_number }</p>));
+
   return (
     <div>
       <table class="headings">
