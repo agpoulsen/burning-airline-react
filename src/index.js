@@ -5,6 +5,7 @@ import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+
 import Airline from './components/Airline';
 import Airplanes from './components/Airplanes';
 import Flights from './components/Flights';
@@ -17,18 +18,19 @@ import Login from './components/Login';
 
 ReactDOM.render(
   <BrowserRouter>
-    <NavBar />
-    <Routes>
-      <Route path='/' element={ <App /> } exact />
-      <Route path='/airplanes' element={ <Airplanes />} />
-      <Route path='/flights' element={ <Flights /> } />
-      <Route path='/search' element={ <Search /> } />
-      <Route path='/user' element={ <User /> } />
-      <Route path='/login' element={ <Login /> } />
-      <Route path='/signup' element={ <Signup />} />
-      <Route element={ <Error /> } />
-    </Routes>
-
+    <div className="container">
+      <NavBar />
+      <Routes>
+        <Route path='/' element={ <App /> } exact />
+        <Route path='/airplanes' element={ <Airplanes />} />
+        <Route path='/flights' element={ <Flights /> } />
+        <Route path='/search' element={ <Search /> } />
+        <Route path='/user' element={ <User /> } />
+        <Route path='/login' element={ <Login /> } />
+        <Route path='/signup' element={ <Signup />} />
+        <Route element={ <Error /> } />
+      </Routes>
+    </div>
   </BrowserRouter>,
   document.getElementById('root')
 );

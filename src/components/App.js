@@ -9,16 +9,15 @@ import User from './User';
 import Error from './Error';
 import NavBar from './Navbar'
 
-
 class App extends Component {
 
   render() {
     return (
-      <main>
-        
+      <div>
+      <h1>WELCOME TO BURNING AIRLINES!</h1>
 
-
-      </main>
+      <h4>Run.</h4>
+      </div>
     );
   }
 }

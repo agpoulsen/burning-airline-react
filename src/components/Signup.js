@@ -6,6 +6,7 @@ class Signup extends Component {
     this.state = {
 
     };
+    this._handleChange = this._handleChange.bind(this);
   }
 
   _validateForm( e ) {
@@ -13,27 +14,32 @@ class Signup extends Component {
     console.log( 'Submit was clicked' );
   }
 
+  _handleChange( e ) {
+    console.log(e.target.value)
+    console.log(e.target.name)
+  }
+
   render() {
     return (
       <div>
         <h2>Burning Airlines Signup</h2>
 
-        <form onSubmit={ this._validateForm }>
+        <form onSubmit={ this._validateForm } onChange={ this._handleChange }>
 
           <label> Name:
-            <input type="text" required placeholder='John Smith'/>
+            <input name='name' type="text" required placeholder='John Smith'/>
           </label>
 
           <label> Email Address:
-            <input type="email" required placeholder='jsmith@mail.com'/>
+            <input name='email' type="email" required placeholder='jsmith@mail.com'/>
           </label>
 
           <label> Password:
-            <input type="password" required/>
+            <input name='password' type="password" required/>
           </label>
 
           <label> Confirm Password:
-            <input type="password" required/>
+            <input name='password_confirm' type="password" required/>
           </label>
 
           <input type="submit" value='Sign Up'/>
