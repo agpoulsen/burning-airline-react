@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 class Signup extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       name: '',
       email: '',
@@ -12,10 +13,16 @@ class Signup extends Component {
     this._handleChange = this._handleChange.bind(this);
   }
 
+  saveUser(user) {
+    axios.post('http://localhost:3000/users.json', {name: user.name, email: user.email, password: user.password }).then(response => {
+      console.log(response);
+    });
+  }
+
   handleSubmit( e ) {
     e.preventDefault();
-    console.log( 'Submit was clicked' );
-    this.props.onSignup( this.state );
+    console.log( this.state );
+    this.saveUser( this.state );
   }
 
   _handleChange( e ) {
@@ -23,6 +30,8 @@ class Signup extends Component {
       [e.target.name]: e.target.value
     });
   }
+
+
 
   render() {
     return (

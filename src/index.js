@@ -15,10 +15,7 @@ import NavBar from './components/Navbar';
 import Signup from './components/Signup';
 import Login from './components/Login';
 
-const signUp = (props) => {
-  console.log('This function works');
-  //TODO: Turn this into a get request
-};
+
 
 ReactDOM.render(
   <BrowserRouter>
@@ -31,7 +28,7 @@ ReactDOM.render(
         <Route path='/search' element={ <Search /> } />
         <Route path='/user' element={ <User /> } />
         <Route path='/login' element={ <Login /> } />
-        <Route path='/signup' element={ <Signup onSignup={ signUp }/>} />
+        <Route path='/signup' element={ <Signup /> } />
         <Route element={ <Error /> } />
       </Routes>
     </div>
