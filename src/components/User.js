@@ -1,10 +1,30 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 class User extends Component {
+  constructor() {
+    super();
+    this.state={
+      users: []
+    }
+  }
+
+  componentDidMount() {
+    const fetchUsers = () => {
+      axios('http://localhost:3000/users.json').then(response =>{
+        console.log(response.data)
+        this.setState({users: response.data});
+      });
+    };
+    fetchUsers();
+  }
+
   render() {
     return (
-      <p>User Profile coming soon</p>
-    )
+      <div>
+      {this.state.users.map(user => <p> {user.name} - {user.email}</p>)}
+      </div>
+    );
   }
 }
 

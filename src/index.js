@@ -17,6 +17,7 @@ import Login from './components/Login';
 
 const signUp = (props) => {
   console.log('This function works');
+  //TODO: Turn this into a get request
 };
 
 ReactDOM.render(
