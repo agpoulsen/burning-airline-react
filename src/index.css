@@ -32,3 +32,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+tr, td {
+
+  width: 100px;
+}
+
+ .headings  th {
+   width: 100px;
+   border-bottom: 1px solid black;
+ }
+
+ .headings > tr {
+   width: 100px;
+ }
+
+ .table {
+   margin-left: 20px;
+ }
