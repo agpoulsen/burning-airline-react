@@ -96,7 +96,7 @@ const AirplanesList = (props) => {
   return(
     <div>
       <h2>Insert a Plane:</h2>
-      { props.airplanes.map((s) => <p key={ s.id }> Plane Name: { s.name } Rows: { s.rows } Column: { s.column } </p>) }
+      { props.airplanes.map((s) => <p key={ s.id }> ---  Plane Name: { s.name } --- Rows: { s.rows } --- Column: { s.column } </p>) }
       </div>
   )
 };
